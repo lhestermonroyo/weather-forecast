@@ -1,10 +1,11 @@
 import React from 'react';
+import Main from '../../components/Main';
 
 const HomePage = () => {
   return (
-    <div>
+    <Main>
       <h1>Home Page</h1>
-    </div>
+    </Main>
   );
 };
 

@@ -1,0 +1,42 @@
+/* navbar styles */
+.navbar {
+  background: #fafafa;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-container {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-container p {
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+/* main component styles */
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+}
