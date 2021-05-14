@@ -1,7 +1,7 @@
 /* default styles */
 .btn-default {
   color: #fff;
-  background: #000;
+  background: #0275d8;
   padding: 16px 42px;
   border: none;
   font-size: 16px;
@@ -9,6 +9,11 @@
   font-weight: 700;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.btn-default:hover {
+  background: #0189ff;
+  transition: all 0.2s ease-out;
 }
 
 /* loading styles */
@@ -79,6 +84,14 @@
 .main {
   display: flex;
   justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1489781879256-fa824b56f24f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+      no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }
 
 .main-container {
@@ -94,7 +107,61 @@
   max-width: 700px;
 }
 
+.landing-container h1 {
+  font-size: 48px;
+  line-height: 12px;
+}
+
 .landing-container p {
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 24px;
+}
+
+/* home page styles */
+.home-container {
+  text-align: center;
+}
+
+.home-container h2 {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.home-container p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.search-container {
+  margin-top: 64px;
+}
+
+.input-prepend-container {
+  position: relative;
+}
+
+.input-prepend-container .input-prepend {
+  position: absolute;
+  color: #0275d8;
+  top: 18px;
+  left: 18px;
+  font-size: 18px;
+}
+
+.input-prepend-container input {
+  padding: 16px;
+  padding-left: 54px;
+  width: 360px;
+  border-radius: 4px;
+  border: 1px solid #b7b9c0;
+  outline: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.search-btn {
+  margin-top: 24px;
 }
