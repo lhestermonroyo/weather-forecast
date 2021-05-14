@@ -16,6 +16,11 @@
   transition: all 0.2s ease-out;
 }
 
+.btn-default:disabled {
+  background: #59affa;
+  cursor: default;
+}
+
 /* loading styles */
 .loading-screen {
   z-index: 3;
@@ -120,7 +125,12 @@
 
 /* home page styles */
 .home-container {
+  width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-container h2 {
@@ -195,4 +205,124 @@
 
 .error-msg {
   text-align: center;
+}
+
+/* mobile view styles */
+@media only screen and (max-width: 1200px) {
+  .btn-default {
+    padding: 8px 24px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  /* navbar styles */
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .logo-container img {
+    height: 40px;
+    width: auto;
+  }
+
+  .logo-container p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 12px;
+  }
+
+  .navbar-btn {
+    position: absolute;
+    right: 16px;
+  }
+
+  /* landing page styles */
+  .landing-container h1 {
+    font-size: 32px;
+    line-height: 12px;
+  }
+
+  .landing-container p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  /* home page styles */
+  .home-container h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .home-container p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .input-prepend-container .input-prepend {
+    top: 12px;
+    left: 12px;
+    font-size: 16px;
+  }
+
+  .input-prepend-container input {
+    padding: 8px;
+    padding-left: 36px;
+  }
+
+  /* weather page styles */
+  .weather-container {
+    padding: 0 16px;
+  }
+
+  .weather-container h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .card-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-content {
+    padding: 8px;
+  }
+
+  .card-content h1 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .card-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .landing-container {
+    padding: 0 16px;
+  }
+
+  .home-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .input-prepend-container input {
+    max-width: 260px;
+  }
+
+  .weather-container h2 {
+    margin-top: 40px;
+  }
+
+  .card-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

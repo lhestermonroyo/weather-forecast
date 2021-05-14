@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Main from '../../components/Main';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -9,6 +9,10 @@ const HomePage = () => {
   const history = useHistory();
 
   const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    document.title = 'Home | Weather Forecast';
+  }, []);
 
   const handleSearchWeather = async (e) => {
     e.preventDefault();
@@ -34,7 +38,12 @@ const HomePage = () => {
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <button className='btn-default search-btn'>Display Weather</button>
+          <button
+            className='btn-default search-btn'
+            disabled={search ? false : true}
+          >
+            Display Weather
+          </button>
         </form>
       </div>
     </Main>

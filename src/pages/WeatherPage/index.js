@@ -16,6 +16,7 @@ const WeatherPage = (props) => {
 
   useEffect(() => {
     fetchWeather();
+    document.title = `${match.params.city} | Weather Forecast`;
   }, []);
 
   const fetchWeather = async () => {

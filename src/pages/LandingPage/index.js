@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import Main from '../../components/Main';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -6,6 +6,10 @@ import LoadingScreen from '../../components/LoadingScreen';
 
 const LandingPage = () => {
   const { loginWithRedirect, isLoading, isAuthenticated } = useAuth0();
+
+  useEffect(() => {
+    document.title = 'Weather Forecast';
+  }, []);
 
   if (isLoading) {
     return <LoadingScreen loadingMsg='Loggin in, please wait...' />;
