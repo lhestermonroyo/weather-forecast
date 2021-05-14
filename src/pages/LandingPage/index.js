@@ -8,7 +8,7 @@ const LandingPage = () => {
   const { loginWithRedirect, isLoading, isAuthenticated } = useAuth0();
 
   if (isLoading) {
-    return <LoadingScreen loadingMsg='Loading, please wait...' />;
+    return <LoadingScreen loadingMsg='Loggin in, please wait...' />;
   }
 
   if (isAuthenticated) {

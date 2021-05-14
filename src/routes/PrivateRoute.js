@@ -12,7 +12,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
       {...rest}
       render={(props) => {
         if (isLoading) {
-          return <LoadingScreen loadingMsg='Logging in, please wait..' />;
+          return <LoadingScreen loadingMsg='Loading, please wait...' />;
         }
 
         if (isAuthenticated === true) {
