@@ -1,21 +1,19 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import Main from '../../components/Main';
 import { useAuth0 } from '@auth0/auth0-react';
+import LoadingScreen from '../../components/LoadingScreen';
 
 const LandingPage = () => {
   const { loginWithRedirect, logout, isLoading, isAuthenticated, user } =
     useAuth0();
 
   if (isLoading) {
-    return (
-      <div className='landing-container'>
-        <p>Loading, please wait...</p>
-      </div>
-    );
+    return <LoadingScreen loadingMsg='Loading, please wait...' />;
   }
 
   if (isAuthenticated) {
-    console.log('Logged in', user);
+    return <Redirect to='/home' />;
   }
 
   return (
@@ -28,9 +26,6 @@ const LandingPage = () => {
         </p>
         <button className='btn-default' onClick={() => loginWithRedirect()}>
           Login
-        </button>
-        <button className='btn-default' onClick={() => logout()}>
-          Logout
         </button>
       </div>
     </Main>
