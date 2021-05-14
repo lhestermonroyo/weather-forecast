@@ -12,7 +12,7 @@ const Routes = () => {
       <React.Suspense fallback={<p>Loading page, please wait...</p>}>
         <Route exact path='/' component={LandingPage} />
         <PrivateRoute exact path='/home' component={HomePage} />
-        <PrivateRoute exact path='/weather' component={WeatherPage} />
+        <PrivateRoute exact path='/weather/:city' component={WeatherPage} />
       </React.Suspense>
     </Switch>
   );

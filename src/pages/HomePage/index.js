@@ -1,26 +1,19 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Main from '../../components/Main';
 import { useAuth0 } from '@auth0/auth0-react';
-import axios from 'axios';
-
-const openWeatherKey = process.env.REACT_APP_OPEN_WEATHER_KEY;
 
 const HomePage = () => {
   const { user } = useAuth0();
+
+  const history = useHistory();
 
   const [search, setSearch] = useState('');
 
   const handleSearchWeather = async (e) => {
     e.preventDefault();
 
-    try {
-      const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${openWeatherKey}`
-      );
-      console.log(res);
-    } catch (error) {
-      console.log(error);
-    }
+    return history.push(`/weather/${search}`);
   };
 
   return (
