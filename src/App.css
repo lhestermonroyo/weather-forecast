@@ -304,12 +304,19 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .logo-container p {
+    display: none;
+  }
   .landing-container {
     padding: 0 16px;
   }
 
   .home-container {
     width: 100%;
+  }
+
+  .card-hide-mobile {
+    display: none;
   }
 }
 

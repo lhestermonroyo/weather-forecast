@@ -61,19 +61,19 @@ const WeatherPage = (props) => {
                   <h1>{data?.main.temp} &#730;</h1>
                 </div>
               </div>
-              <div className='card'>
+              <div className='card card-hide-mobile'>
                 <div className='card-content'>
                   <p>Description</p>
                   <h1>{data?.weather[0].description}</h1>
                 </div>
               </div>
-              <div className='card'>
+              <div className='card card-hide-mobile'>
                 <div className='card-content'>
                   <p>Main</p>
                   <h1>{data?.weather[0].main}</h1>
                 </div>
               </div>
-              <div className='card '>
+              <div className='card card-hide-mobile'>
                 <div className='card-content'>
                   <p>Humidity</p>
                   <h1>{data?.main.humidity}</h1>
