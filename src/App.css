@@ -1,8 +1,23 @@
+/* default styles */
+.btn-default {
+  color: #fff;
+  background: #000;
+  padding: 18px 42px;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* navbar styles */
 .navbar {
   background: #fafafa;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
   height: 80px;
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: center;
 }
@@ -26,6 +41,7 @@
 .logo-container p {
   font-weight: 700;
   font-size: 18px;
+  line-height: 30px;
   margin-left: 12px;
 }
 
@@ -37,6 +53,18 @@
 
 .main-container {
   width: 1200px;
+  height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+/* landing page styles */
+.landing-container {
+  max-width: 700px;
+}
+
+.landing-container p {
+  font-size: 18px;
+  line-height: 30px;
 }
