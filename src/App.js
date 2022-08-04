@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -17,9 +17,9 @@ const App = () => {
     >
       <React.Fragment>
         <Navbar />
-        <BrowserRouter>
+        <HashRouter>
           <Routes />
-        </BrowserRouter>
+        </HashRouter>
       </React.Fragment>
     </Auth0Provider>
   );
